@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
 #include "vaga.h"
 
 #define TAM_A 100
@@ -8,11 +9,12 @@
 #define TAM_C 50
 #define TAM_D 30
 
+/*
 struct _veiculo
 {
 	char *placa;
 };
-
+*/
 //typedef struct veiculo Veiculo;
 
 struct vaga
@@ -28,7 +30,7 @@ struct vaga
 
 };
 
-typedef struct vaga Vagas;
+//typedef struct vaga Vagas;
 
 Vagas* criar_vaga()
 {
@@ -45,7 +47,11 @@ int salvar_arquivo(Vagas *v)
 	FILE *p = fopen("banco","w");
 	int i;
 	Veiculo veiculo;
-	if(p != NULL)
+	if(p == NULL)
+	{ 
+		printf("ERRO\n");
+	}
+	else
 	{
 		fprintf(p, "A: ");
 		if(v->qtdA > 0)
@@ -101,28 +107,29 @@ int salvar_arquivo(Vagas *v)
 
 
 		fclose(p);
+		return 1;
 	}
 	return -1;
 }
 
-Vagas *carregar_arquivo()
+void carregar_arquivo(Vagas *vagas)
 {
 	FILE *p = fopen("banco", "r");
-	Vagas *vagas = criar_vaga();
-	char placa[7];
-	char cursor[2];
+	//Vagas *vagas = (Vagas*)	malloc(sizeof(Vagas));
+	char *placa = (char*) malloc(7 *sizeof(char));
+	char *cursor = (char*) malloc(2 *sizeof(char));
 	char c;
-	Veiculo veiculo;
 	if(p != NULL)	
 	{	
 		while(!feof(p))
 		{
 			fread (cursor,sizeof(char), 2, p);
-			if(strcmp(cursor,"A:"))
+			if(strcmp(cursor,"A:") == 0)
 			{
+				
 				while ((c = fgetc(p)) != '$')
 				{
-					
+					Veiculo veiculo;	
 					fread (placa,sizeof(char), 7, p);		
 					//printf("SetorA: %s\n", placa);
 					veiculo.placa = placa;
@@ -132,10 +139,12 @@ Vagas *carregar_arquivo()
 			}
 			fseek(p, 1,SEEK_CUR);
 			fread (cursor,sizeof(char), 2, p);
-			if(strcmp(cursor,"B:"))
+			if(strcmp(cursor,"B:") == 0)
 			{
+				
 				while ((c = fgetc(p)) != '$')
 				{
+					Veiculo veiculo;
 					//fseek(p, -1,SEEK_CUR);
 					fread (placa,sizeof(char), 7, p);		
 					//printf("SetorB: %s\n", placa);
@@ -146,10 +155,12 @@ Vagas *carregar_arquivo()
 			}
 			fseek(p, 1,SEEK_CUR);
 			fread (cursor,sizeof(char), 2, p);
-			if(strcmp(cursor,"C:"))
+			if(strcmp(cursor,"C:") == 0)
 			{
+				
 				while ((c = fgetc(p)) != '$')
 				{
+					Veiculo veiculo;
 					//fseek(p, -1,SEEK_CUR);
 					fread (placa,sizeof(char), 7, p);		
 					//printf("SetorC: %s\n", placa);
@@ -160,10 +171,12 @@ Vagas *carregar_arquivo()
 			}
 			fseek(p, 1,SEEK_CUR);
 			fread (cursor,sizeof(char), 2, p);
-			if(strcmp(cursor,"D:"))
+			if(strcmp(cursor,"D:") == 0)
 			{
+
 				while ((c = fgetc(p)) != '$')
 				{
+					Veiculo veiculo;
 					//fseek(p, -1,SEEK_CUR);
 					fread (placa,sizeof(char), 7, p);		
 					//printf("SetorD: %s\n", placa);
@@ -175,14 +188,9 @@ Vagas *carregar_arquivo()
 			break;
 		}
 		fclose(p);
-		return vagas;
+		//return vagas;
 	}
-
-	return NULL;
-	
-   
-
-   return 0;
+	//return NULL;
 }
 
 int inserir_veiculo(Vagas *vagas,Veiculo v, int id)
@@ -366,4 +374,11 @@ Veiculo* criar_veiculo(char *placa)
 	novo->placa = placa;
 	return novo;
 }
-
+/*
+int main(int argc, char const *argv[])
+{
+	Vagas *c = carregar_arquivo();
+	imprimir(c);
+	return 0;
+}
+*/

@@ -1,15 +1,15 @@
-Servidor Iniciado Data :Jun 16 2016 Hora:13:25:36 
+Servidor Iniciado Data :Jun 20 2016 Hora:23:20:16 
+Servidor Iniciado Data :Jun 20 2016 Hora:23:20:16 
+Servidor Iniciado Data :Jun 20 2016 Hora:23:20:16 
+Servidor Iniciado Data :Jun 20 2016 Hora:23:20:16 
+Servidor Iniciado Data :Jun 20 2016 Hora:23:20:16 
 PORTA #7890
 Cliente Iniciado 
-Mensagem: Cliente Iniciado Mensagem: Testete Iniciado Mensagem: Testete Iniciado Mensagem: Testete Iniciado Servidor Iniciado Data :Jun 17 2016 Hora:00:11:56 
-PORTA #7890
-Servidor Iniciado Data :Jun 17 2016 Hora:00:11:56 
-PORTA #7890
-Cliente Iniciado 
-Mensagem 1: Cliente Iniciado Mensagem 1: Testete Iniciado Cliente Iniciado 
-Mensagem 2: Cliente Iniciado Mensagem 2: Testete Iniciado Servidor Iniciado Data :Jun 17 2016 Hora:00:52:28 
-PORTA #7890
-Cliente Iniciado 
-Mensagem 1: Cliente Iniciado Cliente Iniciado 
-Mensagem 2: Cliente Iniciado Servidor Iniciado Data :Jun 17 2016 Hora:13:21:29 
-PORTA #7890
+Mensagem de Cliente 1: Cliente Iniciado 
+ Dados: Cliente Iniciado -1 
+Mensagem de Cliente 1: POI1234A 
+ Dados: POI1234A -1 
+Mensagem de Cliente 1: POI1234A 
+ Dados: POI1234A -1 
+Mensagem de Cliente 1: 0987654A 
+ Dados: 0987654A -1 
