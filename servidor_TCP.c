@@ -9,8 +9,7 @@
 #include <time.h>
 
 #include <unistd.h>
-
-#include "vaga.h"
+#include "Vaga/vaga.h"
 
 
 
@@ -93,22 +92,14 @@ int main()
 	*/
 	int status;
 	int cont = 0;
-	
-/*
-	Vagas *v = criar_vaga();
-	carregar_arquivo(v);
-	Veiculo veiculo;
-	veiculo.placa = "ZXCVBNM";
-	int c = 0; 
-	c = inserir_veiculo(v,veiculo, 1);
-	imprimir(v);
-	printf("%d\n", c);
-	//FILE *file = fopen("banco","w");
-	//int id = salvar_arquivo(v,file);
-	*/
-	int id;
 
-	
+	int id;
+	/*
+	Vaga *v = criar_vaga();
+	carregar_arquivo(v);
+	//salvar_arquivo(v);
+	imprimir(v);
+	*/
 	while(controla_loop)
 	{			
 		int cl = espera_cliente(&Novosocket,Meusocket,(struct sockaddr *)&endereco_dele);		
@@ -125,13 +116,11 @@ int main()
 
 			if(pid == 0)	
 			{
-				Vagas *v = criar_vaga();
+				Vaga *v = criar_vaga();
 				carregar_arquivo(v);
-				Veiculo veiculo;
 				int id = 0;
 				while(1)
 				{	
-					
 					if ((numbytes=recv(Novosocket, buf, 100, 0)) == -1) 
 					{	
 						perror("recv");
@@ -142,7 +131,7 @@ int main()
 					if(numbytes > 0)
 					{
 						FILE *log =fopen("log","a");
-						fprintf(log, "Mensagem de Cliente %d: %s \n",cont,buf);
+						fprintf(log, "Mensagem de Cliente %d: \n",cont);
 						fclose(log);					
 						numbytes = 0;
 						if(strcmp(buf , "exit") == 0)
@@ -153,38 +142,33 @@ int main()
 							salvar_arquivo(v);
 							status = 0;
 						}
-						else
+						else if(strlen(buf) == 8)
 						{
 							char tipo = buf[numbytes-1];
 							buf[numbytes-1] = '\0';
 							switch(tipo){
 								case 'A': id = 1;break;
-								case 'E': id = vagaA_cheia(v) == 1 ? 3 : 1; 
-								//case 'B': id = 2;break;
-								//case 'C': id = 3;break;
-								case 'D': id = 4;break;
+								case 'B': id = 2;break;
+								case 'C': id = 3;break;
 								default : id = 0;break;
 							}
-							
-							veiculo.placa = buf;
-							int c = inserir_veiculo(v,veiculo, id);
-							FILE *log = fopen("log","a");
-							fprintf(log, " Dados: %s %d \n",veiculo.placa, c);
-							fclose(log);
-							
-							if(c == 1)
-							{
-								FILE *log = fopen("log","a");
-								fprintf(log, "Veiculo Inserido\n");
-								fclose(log);
-								if (send(Meusocket, "OK", 2, 0) < 0)
-							    {
-							        perror("send:");
-							        return 0;
-							    }
-							}
+
+							int c = inserir_veiculo(v,buf, 1);
 							salvar_arquivo(v);
+							
+							FILE *log = fopen("log","a");
+							fprintf(log, "Veiculo Inserido\n");
+							fclose(log);
+							/*
+							if (send(Meusocket, "OK", 2, 0) < 0)
+						    {
+						        perror("send:");
+						        return 0;
+						    }
+							*/
+							
 						} //Mensagem != de exit
+
 					} //Num Bytes > 0
 				
 				}

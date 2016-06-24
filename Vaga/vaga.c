@@ -1,6 +1,8 @@
+//Operadore de Seleção pra frente CAP 14.2 não tem
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "lista.h"
 #include "vaga.h"
 
@@ -99,7 +101,7 @@ int salvar_arquivo(Vaga *v)
 {
 	Lista *l;
 	int i;
-	FILE *p = fopen("banco","w");
+	FILE *p = fopen("banco","w+");
 	if(p != NULL)
 	{
 		l = v->setorA;
@@ -162,64 +164,75 @@ void imprimir(Vaga *v)
 }
 void carregar_arquivo(Vaga *v)
 {
-	FILE *p = fopen("banco", "r");
-	char *placa = (char*) malloc(7 *sizeof(char));
+	FILE *p = fopen("banco", "r+");
+	
 	char *cursor = (char*) malloc(2 *sizeof(char));
 	char c;
 	if(p != NULL)	
 	{	
 		fread (cursor,sizeof(char), 2, p);
+		cursor[2] = '\0';
 		if(strcmp(cursor,"A:") == 0)
 		{
 			while ((c = fgetc(p)) != '$')
 			{	
+				char *placa = (char*) malloc(7 *sizeof(char));
 				fread (placa,sizeof(char), 7, p);		
-				char *s = placa;
-				int id = inserir_veiculo(v,s,1);
-				
+				placa[7] = '\0';
+				int id = inserir_veiculo(v,placa,1);
+				printf("%s\n", placa);
+				//**v->setorA = lst_inserir(**v->setorA,placa);
+				//**v->qtdA++;
+				//placa = "";
 			}
 				
 		}
 		
 		fseek(p, 1,SEEK_CUR);
 		fread (cursor,sizeof(char), 2, p);
+		cursor[2] = '\0';
 		
 		if(strcmp(cursor,"B:") == 0)
 		{
-			
 			while ((c = fgetc(p)) != '$')
 			{
+				char *placa = (char*) malloc(7 *sizeof(char));
 				fread (placa,sizeof(char), 7, p);		
-				char *s = placa; //printf("%s\n", s);
-				inserir_veiculo(v,s,2);
+				placa[7] = '\0';
+				inserir_veiculo(v,placa,2);
 			}
 		}
+		
 		fseek(p, 1,SEEK_CUR);
 		fread (cursor,sizeof(char), 2, p);
+		cursor[2] = '\0';
 
 		if(strcmp(cursor,"C:") == 0)
 		{
-			
+			char *placa = (char*) malloc(7 *sizeof(char));
 			while ((c = fgetc(p)) != '$')
 			{
 				fread (placa,sizeof(char), 7, p);			
-				char *s = placa;
-				//printf("%s\n", s);
-				inserir_veiculo(v,s,3);
+				placa[7] = '\0';
+				inserir_veiculo(v,placa,3);
 			}
-			
-		}
-		fclose(p);
 		
-	}
+		}
+
+	}	
+	free(cursor);
+	fclose(p);
 }
 
+
+/*
 int main(int argc, char const *argv[])
 {
 	Vaga* v = criar_vaga();
-	carregar_arquivo(v);
-	inserir_veiculo(v,"AFONSON",2);
-	inserir_veiculo(v,"12TESTE",3);
+	//carregar_arquivo(v);
+	int a = inserir_veiculo(v,"AFONSON",2);
+	printf("%d\n", a);
+	//inserir_veiculo(v,"12TESTE",3);
 	salvar_arquivo(v);
 	//imprimir(v);
 	/*
@@ -234,6 +247,7 @@ int main(int argc, char const *argv[])
 	inserir_veiculo(v,"QWERTYU",1);
 
 	salvar_arquivo(v);
-	*/
+
 	return 0;
 }
+*/
