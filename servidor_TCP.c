@@ -134,60 +134,91 @@ int main()
 					if(numbytes > 0)
 					{
 						FILE *log =fopen("log","a");
-						fprintf(log, "Mensagem de Cliente %d: \n",cont);
+						fprintf(log, "Mensagem de Cliente %d: %s \n",cont, buf);
 						fclose(log);					
-						numbytes = 0;
-						if(strcmp(buf , "exit") == 0)
-						{	
-							FILE *log =fopen("log","a");
-							fprintf(log, "Cliente %d finalizado",cont);
-							fclose(log);
-							salvar_arquivo(v);
-							status = 0;
-						}
-						else if(strlen(buf) == 8)
+				
+						char tipo = buf[numbytes-1];
+						buf[numbytes-1] = '\0';
+						char *placa = (char*) malloc(7 * sizeof(char));
+						char *enviar = (char*) malloc(7 * sizeof(char));
+						int j;
+				
+						for (j = 0; j < 7; j++)
 						{
-							char tipo = buf[numbytes-1];
-							buf[numbytes-1] = '\0';
-							char *enviar = (char*) malloc(7 * sizeof(char));
-							int j;
-							for (j = 0; j < 7; j++)
-							{
-								enviar[j] = buf[j];
-							}
-							switch(tipo){
-								case 'A': id = 1;break;
-								case 'B': id = 2;break;
-								case 'C': id = 3;break;
-								default : id = 0;break;
-							}
+							enviar[j] = buf[j];
+						}
 
-							int c = inserir_veiculo(v,enviar, 1);
-							salvar_arquivo(v);
-							
+						if(tipo == 'A')
+						{
+							//Inserir
+							id = 1 + rand() % 3;
+							int c = inserir_veiculo(v,enviar, id);
 							FILE *log = fopen("log","a");
 							fprintf(log, "Veiculo Inserido, %s \n",enviar);
-							fclose(log);							
-							
-						} //Mensagem != de exit
-						if(strcmp(buf , "RE") == 0)
-						{
-							if (send(Novosocket, "OK", 2, 0) < 0)
-						    {
-						        perror("send:");
-						        return 0;
-						    }
+							fprintf(log, "id e c , %d %d \n",id,c);
+							fclose(log);	
+							salvar_arquivo(v);	
 						}
+
+						if(tipo == 'B')
+						{
+							//Pesquisa
+							FILE *log = fopen("log","a");
+							fprintf(log, "Pesquisa Solicitado %s \n",enviar );
+							
+
+							int c = buscar(v, enviar,1);
+							int d = buscar(v, enviar,2);
+							int e = buscar(v, enviar,3);
+							fprintf(log, "Dados %d %d %d \n",c,d,e);
+							fclose(log);
+							if(c == 1 || d == 1 || e == 1)
+							{
+					    		FILE *log = fopen("log","a");
+								fprintf(log, "Veiculo encontrado %s \n",enviar );
+								fclose(log);
+								if (send(Novosocket, "OK", 2, 0) < 0)
+					    		{
+					        		perror("send:");
+					        		return 0;
+					    		}
+					    		
+					    	}
+					    	else
+					    	{
+				    			if (send(Novosocket, "ER", 2, 0) < 0)
+					    		{
+					        		perror("send:");
+					        		return 0;
+					    		}
+					    	}
+						}
+						
+						if(tipo == 'C')
+						{
+							//Excluir
+
+							FILE *log = fopen("log","a");
+							fprintf(log, "Excluir %s \n",buf);
+							fclose(log);
+							
+							int c = retirar_veiculo(v, enviar, 1);
+							int d = retirar_veiculo(v, enviar, 2);
+							int e = retirar_veiculo(v, enviar, 3);
+							
+							salvar_arquivo(v);
+							
+							if (send(Novosocket, "OK", 2, 0) < 0)
+				    		{
+				        		perror("send:");
+				        		return 0;
+				    		}
+						}
+						//numbytes = 0;
 					} //Num Bytes > 0
-				
 				}
 			}
 
-			else
-			{
-				printf("Pai\n");
-				
-			}
 		}		
 		//while(waitpid(-1,NULL,WNOHANG) > 0); /* Limpa o processo crianca.fork() */						
 		//controla_loop = 0;

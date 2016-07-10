@@ -82,17 +82,17 @@ int buscar(Vaga *vaga, char* placa,int id)
 	if(id == 1)
 	{
 		 l = lst_buscar(vaga->setorA,placa);
-		return l == NULL;
+		return l != NULL;
 	}
 	if(id == 2)
 	{
 		l = lst_buscar(vaga->setorB,placa);	
-		return l == NULL;
+		return l != NULL;
 	}
 	if(id == 3)
 	{	
 		l = lst_buscar(vaga->setorC,placa);
-		return l == NULL;
+		return l != NULL;
 	}
 	return -1;
 }

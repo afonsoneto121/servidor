@@ -1,120 +1,156 @@
-Servidor Iniciado Data :Jun 24 2016 Hora:19:48:51 
+Servidor Iniciado Data :Jul 10 2016 Hora:16:26:05 
 PORTA #7890
 Cliente Iniciado 
-Mensagem de Cliente 1: 
-Mensagem de Cliente 1: 
-Veiculo Inserido, zxc1267 
-Servidor Iniciado Data :Jun 24 2016 Hora:19:54:33 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Servidor Iniciado Data :Jul 10 2016 Hora:16:26:05 
 PORTA #7890
 Cliente Iniciado 
-Mensagem de Cliente 1: 
-Mensagem de Cliente 1: 
-Veiculo Inserido, xcv1234 
-Servidor Iniciado Data :Jun 24 2016 Hora:20:02:11 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Servidor Iniciado Data :Jul 10 2016 Hora:16:39:44 
 PORTA #7890
 Cliente Iniciado 
-Mensagem de Cliente 1: 
-Mensagem de Cliente 1: 
-Veiculo Inserido, qwe1234 
-Mensagem de Cliente 1: 
-Veiculo Inserido, qwe1234 
-Mensagem de Cliente 1: 
-Veiculo Inserido, qwe1234 
-Mensagem de Cliente 1: 
-Veiculo Inserido, qwe1234 
-Servidor Iniciado Data :Jun 24 2016 Hora:20:17:10 
-Servidor Iniciado Data :Jun 24 2016 Hora:20:17:10 
-Servidor Iniciado Data :Jun 24 2016 Hora:20:17:10 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Veiculo encontrado ASD1234 
+Mensagem de Cliente 1: ASD1235B 
+Pesquisa Solicitado ASD1235 
+Veiculo encontrado ASD1235 
+Cliente Iniciado 
+Mensagem de Cliente 2: Cliente Iniciado 
+Mensagem de Cliente 2: ASD1234C 
+Excluir ASD1234 
+Servidor Iniciado Data :Jul 10 2016 Hora:17:26:22 
 PORTA #7890
 Cliente Iniciado 
-Mensagem de Cliente 1: 
-Mensagem de Cliente 1: 
-Veiculo Inserido, asd1234 
-Mensagem de Cliente 1: 
-Veiculo Inserido, asd1234 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD1231B 
+Pesquisa Solicitado ASD1231 
+Veiculo encontrado ASD1231 
+Mensagem de Cliente 1: ASD1234C 
+Excluir ASD1234 
+Mensagem de Cliente 1: ASD1236C 
+Excluir ASD1236 
 Cliente Iniciado 
-Mensagem de Cliente 2: 
-Mensagem de Cliente 2: 
-Veiculo Inserido, bgt5436 
-Mensagem de Cliente 2: 
-Veiculo Inserido, bgt5436 
-Servidor Iniciado Data :Jun 24 2016 Hora:20:17:10 
+Mensagem de Cliente 2: Cliente Iniciado 
+Mensagem de Cliente 2: ASD123EB 
+Pesquisa Solicitado ASD123E 
+Veiculo encontrado ASD123E 
+Mensagem de Cliente 2: ASD123EA 
+Veiculo Inserido, ASD123E 
+id e c , 2 1 
+Servidor Iniciado Data :Jul 10 2016 Hora:17:38:49 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:52:31 
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD123QB 
+Pesquisa Solicitado ASD123Q 
+Dados 1 1 1 
+Veiculo encontrado ASD123Q 
+Servidor Iniciado Data :Jul 10 2016 Hora:17:38:49 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:53:05 
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD123EB 
+Pesquisa Solicitado ASD123E 
+Dados 0 1 0 
+Veiculo encontrado ASD123E 
+Mensagem de Cliente 1: ASD123TB 
+Pesquisa Solicitado ASD123T 
+Dados 0 0 0 
+Mensagem de Cliente 1: ASD123TC 
+Excluir ASD123T 
+Mensagem de Cliente 1: ASD123TA 
+Veiculo Inserido, ASD123T 
+id e c , 2 1 
+Servidor Iniciado Data :Jul 10 2016 Hora:17:44:53 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:53:24 
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 2: Cliente Iniciado 
+Mensagem de Cliente 2: ASD1234C 
+Excluir ASD1234 
+Servidor Iniciado Data :Jul 10 2016 Hora:17:44:53 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:02 
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD123EB 
+Pesquisa Solicitado ASD123E 
+Dados 0 1 0 
+Veiculo encontrado ASD123E 
+Mensagem de Cliente 1: ASD123RB 
+Pesquisa Solicitado ASD123R 
+Dados 0 0 0 
+Mensagem de Cliente 1: ASD123EC 
+Excluir ASD123E 
+Servidor Iniciado Data :Jul 10 2016 Hora:18:02:10 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: ASD1234A 
+Veiculo Inserido, ASD1234 
+id e c , 2 1 
+Mensagem de Cliente 1: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Dados 0 1 0 
+Veiculo encontrado ASD1234 
+Mensagem de Cliente 1: ASD1234C 
+Excluir ASD1234 
+Cliente Iniciado 
+Mensagem de Cliente 2: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 3: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 4: Cliente Iniciado 
+Mensagem de Cliente 4: QWE1237A 
+Veiculo Inserido, QWE1237 
+id e c , 2 1 
+Mensagem de Cliente 4: ERT1245A 
+Veiculo Inserido, ERT1245 
+id e c , 2 1 
+Mensagem de Cliente 4: ERT1245A 
+Veiculo Inserido, ERT1245 
+id e c , 1 1 
+Mensagem de Cliente 4: ERT1245A 
+Veiculo Inserido, ERT1245 
+id e c , 2 1 
+Mensagem de Cliente 4: ERT1245A 
+Veiculo Inserido, ERT1245 
+id e c , 3 1 
+Mensagem de Cliente 4: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Dados 0 0 0 
+Mensagem de Cliente 4: ASD1234B 
+Pesquisa Solicitado ASD1234 
+Dados 0 0 0 
+Mensagem de Cliente 4: ERT1245B 
+Pesquisa Solicitado ERT1245 
+Dados 1 1 1 
+Veiculo encontrado ERT1245 
+Mensagem de Cliente 4: ERT1245C 
+Excluir ERT1245 
+Servidor Iniciado Data :Jul 10 2016 Hora:18:36:40 
 PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:54:17 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:01:57:28 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:07:18 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:07:18 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:07:18 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:08:38 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:08:38 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:08:38 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:10:11 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:10:44 
-PORTA #7890
-Servidor Iniciado Data :Jul  7 2016 Hora:02:11:02 
-PORTA #7890
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Mensagem de Cliente 1: asd1234B 
+Pesquisa Solicitado asd1234 
+Dados 0 0 0 
+Mensagem de Cliente 1: ERT1245B 
+Pesquisa Solicitado ERT1245 
+Dados 0 1 0 
+Veiculo encontrado ERT1245 
+Mensagem de Cliente 1: ERT1245B 
+Pesquisa Solicitado ERT1245 
+Dados 0 1 0 
+Veiculo encontrado ERT1245 
+Mensagem de Cliente 1: ERT1245C 
+Excluir ERT1245 
+Mensagem de Cliente 1: ERT1245A 
+Veiculo Inserido, ERT1245 
+id e c , 2 1 
