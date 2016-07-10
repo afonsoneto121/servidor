@@ -96,12 +96,11 @@ int buscar(Vaga *vaga, char* placa,int id)
 	}
 	return -1;
 }
-
 int salvar_arquivo(Vaga *v)
 {
 	Lista *l;
 	int i;
-	FILE *p = fopen("banco","w+");
+	FILE *p = fopen("banco","w");
 	if(p != NULL)
 	{
 		l = v->setorA;
@@ -133,7 +132,9 @@ int salvar_arquivo(Vaga *v)
 		}
 		fseek(p, -1,SEEK_CUR);
 		fprintf(p, "$\n");
-	
+	    
+	    fseek(p, 0,SEEK_SET);
+
 		fclose(p);
 		return 1;
 	}
@@ -164,7 +165,7 @@ void imprimir(Vaga *v)
 }
 void carregar_arquivo(Vaga *v)
 {
-	FILE *p = fopen("banco", "r+");
+	FILE *p = fopen("banco", "r");
 	
 	char *cursor = (char*) malloc(2 *sizeof(char));
 	char c;
@@ -172,15 +173,17 @@ void carregar_arquivo(Vaga *v)
 	{	
 		fread (cursor,sizeof(char), 2, p);
 		cursor[2] = '\0';
+
 		if(strcmp(cursor,"A:") == 0)
 		{
+
 			while ((c = fgetc(p)) != '$')
 			{	
 				char *placa = (char*) malloc(7 *sizeof(char));
 				fread (placa,sizeof(char), 7, p);		
 				placa[7] = '\0';
 				int id = inserir_veiculo(v,placa,1);
-				printf("%s\n", placa);
+				//printf("A: %s %d\n",placa,id);
 				//**v->setorA = lst_inserir(**v->setorA,placa);
 				//**v->qtdA++;
 				//placa = "";
@@ -199,7 +202,8 @@ void carregar_arquivo(Vaga *v)
 				char *placa = (char*) malloc(7 *sizeof(char));
 				fread (placa,sizeof(char), 7, p);		
 				placa[7] = '\0';
-				inserir_veiculo(v,placa,2);
+				int id = inserir_veiculo(v,placa,2);
+				//printf("B: %s %d\n",placa,id);
 			}
 		}
 		
@@ -214,12 +218,14 @@ void carregar_arquivo(Vaga *v)
 			{
 				fread (placa,sizeof(char), 7, p);			
 				placa[7] = '\0';
-				inserir_veiculo(v,placa,3);
+				int id = inserir_veiculo(v,placa,3);
+				//printf("C: %s %d\n",placa,id);
 			}
 		
 		}
 
 	}	
+	//printf("Saiu\n");
 	free(cursor);
 	fclose(p);
 }

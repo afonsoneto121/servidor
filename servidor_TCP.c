@@ -92,13 +92,16 @@ int main()
 	*/
 	int status;
 	int cont = 0;
-
-	int id;
+	
 	/*
 	Vaga *v = criar_vaga();
 	carregar_arquivo(v);
-	//salvar_arquivo(v);
-	imprimir(v);
+	inserir_veiculo(v,"dlc1235",3);
+	inserir_veiculo(v,"dlc1235",1);
+	inserir_veiculo(v,"dlc1235",2);
+	//imprimir(v);
+	salvar_arquivo(v);
+	//imprimir(v);
 	*/
 	while(controla_loop)
 	{			
@@ -146,6 +149,12 @@ int main()
 						{
 							char tipo = buf[numbytes-1];
 							buf[numbytes-1] = '\0';
+							char *enviar = (char*) malloc(7 * sizeof(char));
+							int j;
+							for (j = 0; j < 7; j++)
+							{
+								enviar[j] = buf[j];
+							}
 							switch(tipo){
 								case 'A': id = 1;break;
 								case 'B': id = 2;break;
@@ -153,22 +162,22 @@ int main()
 								default : id = 0;break;
 							}
 
-							int c = inserir_veiculo(v,buf, 1);
+							int c = inserir_veiculo(v,enviar, 1);
 							salvar_arquivo(v);
 							
 							FILE *log = fopen("log","a");
-							fprintf(log, "Veiculo Inserido\n");
-							fclose(log);
-							/*
-							if (send(Meusocket, "OK", 2, 0) < 0)
+							fprintf(log, "Veiculo Inserido, %s \n",enviar);
+							fclose(log);							
+							
+						} //Mensagem != de exit
+						if(strcmp(buf , "RE") == 0)
+						{
+							if (send(Novosocket, "OK", 2, 0) < 0)
 						    {
 						        perror("send:");
 						        return 0;
 						    }
-							*/
-							
-						} //Mensagem != de exit
-
+						}
 					} //Num Bytes > 0
 				
 				}
