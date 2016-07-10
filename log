@@ -154,3 +154,144 @@ Excluir ERT1245
 Mensagem de Cliente 1: ERT1245A 
 Veiculo Inserido, ERT1245 
 id e c , 2 1 
+Servidor Iniciado Data :Jul 10 2016 Hora:18:36:40 
+PORTA #7890
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 2: Cliente Iniciado 
+Mensagem de Cliente 1: QWE0987A 
+Veiculo Inserido, QWE0987 
+id e c , 2 1 
+Mensagem de Cliente 2: QWE0987B 
+Pesquisa Solicitado QWE0987 
+Dados 0 0 0 
+Mensagem de Cliente 1: QWE0987B 
+Pesquisa Solicitado QWE0987 
+Dados 0 1 0 
+Veiculo encontrado QWE0987 
+Mensagem de Cliente 2: QWE0987B 
+Pesquisa Solicitado QWE0987 
+Dados 0 0 0 
+Mensagem de Cliente 2: QWE0987B 
+Pesquisa Solicitado QWE0987 
+Dados 0 0 0 
+Servidor Iniciado Data :Jul 10 2016 Hora:19:42:18 
+PORTA #7890
+Cliente Iniciado 
+Mensagem de Cliente 1: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 2: Cliente Iniciado 
+Mensagem de Cliente 1: POI0098A 
+Veiculo Inserido, POI0098 
+id e c , 2 1 
+Mensagem de Cliente 2: POI0098B 
+Pesquisa Solicitado POI0098 
+Dados 0 1 0 
+Veiculo encontrado POI0098 
+Mensagem de Cliente 2: POI0098B 
+Pesquisa Solicitado POI0098 
+Dados 0 1 0 
+Veiculo encontrado POI0098 
+Mensagem de Cliente 2: POI0098C 
+Excluir POI0098 
+Mensagem de Cliente 1: POI0098B 
+Pesquisa Solicitado POI0098 
+Dados 0 1 0 
+Veiculo encontrado POI0098 
+Mensagem de Cliente 1: POI0098B 
+Pesquisa Solicitado POI0098 
+Dados 0 1 0 
+Veiculo encontrado POI0098 
+Mensagem de Cliente 1: POI0098B 
+Pesquisa Solicitado POI0098 
+Dados 0 1 0 
+Veiculo encontrado POI0098 
+Mensagem de Cliente 1: POI0098C 
+Excluir POI0098 
+Mensagem de Cliente 1: POI0098A 
+Veiculo Inserido, POI0098 
+id e c , 2 1 
+Mensagem de Cliente 1: ASD1234A 
+Veiculo Inserido, ASD1234 
+id e c , 1 1 
+Cliente Iniciado 
+Mensagem de Cliente 3: Cliente Iniciado 
+Mensagem de Cliente 3: ZXC1234A 
+Veiculo Inserido, ZXC1234 
+id e c , 2 1 
+Mensagem de Cliente 3: POI0987A 
+Veiculo Inserido, POI0987 
+id e c , 2 1 
+Cliente Iniciado 
+Mensagem de Cliente 4: Cliente Iniciado 
+Mensagem de Cliente 4: POI0987B 
+Pesquisa Solicitado POI0987 
+Dados 0 1 0 
+Veiculo encontrado POI0987 
+Mensagem de Cliente 3: POI0987B 
+Pesquisa Solicitado POI0987 
+Dados 0 1 0 
+Veiculo encontrado POI0987 
+Mensagem de Cliente 3: POI0987C 
+Excluir POI0987 
+Mensagem de Cliente 3: POI0987B 
+Pesquisa Solicitado POI0987 
+Dados 0 1 0 
+Veiculo encontrado POI0987 
+Mensagem de Cliente 3: POI0987C 
+Excluir POI0987 
+Mensagem de Cliente 3: POI0987B 
+Pesquisa Solicitado POI0987 
+Dados 0 1 0 
+Veiculo encontrado POI0987 
+Cliente Iniciado 
+Mensagem de Cliente 5: Cliente Iniciado 
+Cliente Iniciado 
+Mensagem de Cliente 6: Cliente Iniciado 
+Mensagem de Cliente 5: CVB1234A 
+Veiculo Inserido, CVB1234 
+id e c , 2 1 
+Mensagem de Cliente 6: CVB1234B 
+Pesquisa Solicitado CVB1234 
+Dados 0 1 0 
+Veiculo encontrado CVB1234 
+Mensagem de Cliente 6: CVB1234C 
+Excluir CVB1234 
+Mensagem de Cliente 5: CVB1234B 
+Pesquisa Solicitado CVB1234 
+Dados 0 1 0 
+Veiculo encontrado CVB1234 
+Mensagem de Cliente 6: CVB1234C 
+Excluir CVB1234 
+Mensagem de Cliente 5: CVB1234C 
+Excluir CVB1234 
+Mensagem de Cliente 5: CVB1234C 
+Excluir CVB1234 
+Cliente Iniciado 
+Mensagem de Cliente 7: Cliente Iniciado 
+Mensagem de Cliente 7: ASD5678B 
+Pesquisa Solicitado ASD5678 
+Dados 0 0 0 
+Mensagem de Cliente 7: ASD5678C 
+Excluir ASD5678 
+Mensagem de Cliente 7: ASD5678B 
+Pesquisa Solicitado ASD5678 
+Dados 0 0 0 
+Mensagem de Cliente 7: ASD5678C 
+Excluir ASD5678 
+Cliente Iniciado 
+Mensagem de Cliente 8: Cliente Iniciado 
+Mensagem de Cliente 8: QWE1234A 
+Veiculo Inserido, QWE1234 
+id e c , 2 1 
+Mensagem de Cliente 8: QWE1234B 
+Pesquisa Solicitado QWE1234 
+Dados 0 1 0 
+Veiculo encontrado QWE1234 
+Mensagem de Cliente 8: QWE1234C 
+Excluir QWE1234 
+Mensagem de Cliente 8: QWE1234B 
+Pesquisa Solicitado QWE1234 
+Dados 0 1 0 
+Veiculo encontrado QWE1234 

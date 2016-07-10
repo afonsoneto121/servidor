@@ -163,6 +163,7 @@ int main()
 						if(tipo == 'B')
 						{
 							//Pesquisa
+							carregar_arquivo(v);
 							FILE *log = fopen("log","a");
 							fprintf(log, "Pesquisa Solicitado %s \n",enviar );
 							
@@ -197,7 +198,7 @@ int main()
 						if(tipo == 'C')
 						{
 							//Excluir
-
+							carregar_arquivo(v);
 							FILE *log = fopen("log","a");
 							fprintf(log, "Excluir %s \n",buf);
 							fclose(log);
